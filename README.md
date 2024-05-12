@@ -1,6 +1,6 @@
 ### Описание:
 
-Учебный проект api_yatube - это API социальной сети yatube.
+Учебный проект api_yatube - это API социальной сети YaTube.
 
 ### Как запустить проект:
 
@@ -17,11 +17,11 @@ cd api_final_yatube
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv venv
+python -m venv venv
 ```
 
 ```
-source venv/bin/activate
+source venv/Scripts/activate
 ```
 
 Установить зависимости из файла requirements.txt:
@@ -50,20 +50,20 @@ python manage.py runserver
 
 POST-запрос с токеном, добавление новой публикации в коллекцию публикаций.
 
-`POST http://localhost:port/api/v1/posts/`
+`POST http://127.0.0.1:8000/api/v1/posts`
 
 ```
-{
-    "username": "username",
-    "password": "password"
-}
-```
-
 Ответ:
 
 ```
-{
-    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNTU5ODM3MiwianRpIjoiMjFhM2E3ZWNmYjQ4NGZmNzhkNWUxMDlmOTJlMjU0MjgiLCJ1c2VyX2lkI._BFxjdOwA-wIkjLkS1QOprdJDtlqnkxuHUy94mVGNkM",
-    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTk4MzcyLCJqdGkiOiI3OGU4ZWMzOWU2MGM0ZjY0YmE1ZDI4OGM1ZjI1YjA5MSIsInVzZXJfaWQ.LZ2pzMOWTeshWX577MVMGJ34SjXu2-HFSKww6qWIGe8"
-}
+[
+    {
+        "id": 1,
+        "author": "lenovo",
+        "text": "1",
+        "pub_date": "2024-05-12T12:38:50.337464Z",
+        "image": null,
+        "group": null
+    }
+]
 ```
